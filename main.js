@@ -5,9 +5,11 @@ const logErrors = (error) => {
   throw error
 }
 
+
 process.on('uncaughtException', logErrors)
 process.on('unhandledRejection', (error) => {
   console.log(error)
 })
 
-server.app.start()
+console.log("----main------");
+//server.app.start()

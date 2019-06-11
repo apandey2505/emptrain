@@ -8,6 +8,8 @@ const isAuthenticated = (req, res, next) => {
   }
 }
 
+
+console.log("i am in app>>HELPER>> internal auth");
 const authenticate = passport.authenticate('internal', { session: false })
 
 export { isAuthenticated, authenticate }

@@ -8,6 +8,7 @@ export default class FileController {
     const sampleServiceResult = await SampleService.execute(variable)
     if (sampleServiceResult.successful) {
       Responder.success(res, { variable })
+      res.send("kkk");
     } else {
       Responder.operationFailed(res, sampleServiceResult.error)
     }

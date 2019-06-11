@@ -3,6 +3,7 @@
 /**
  * Module dependencies.
  */
+console.log("i am in BIN >>WWW");
 require('babel-register')
 require('babel-polyfill')
 

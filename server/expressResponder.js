@@ -32,7 +32,7 @@ Responder.deleted = (res) => {
   return sendResponse(res, 204)
 }
 
-Responder.operationFailed = (res, reason) => {
+Responder.operationFailed = (res) => {
   const status = reason.status || 400
   if (reason.name === 'SequelizeUniqueConstraintError') {
     reason = reason.errors.map((er) => {

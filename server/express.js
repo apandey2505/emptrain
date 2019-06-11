@@ -12,6 +12,10 @@ import BadRequestError from '../app/errors/badRequestError'
 import config from '../config/app'
 import path from 'path'
 
+
+
+console.log("I am in server>> express");
+
 // Initialize express app
 const app = express()
 

@@ -1,7 +1,7 @@
 import winston from 'winston'
 import fs from 'fs'
 import config from '../config/app'
-
+console.log("i am in server>>logger");
 const logDir = 'logs'
 
 // Create the log directory if it does not exist
@@ -11,7 +11,7 @@ if (!fs.existsSync(logDir)) {
 
 winston.emitErrs = true
 
-let logLevel = config.get('log_level')
+//let logLevel = config.get('log_level')
 
 const timestampFormat = () => {
   const date = new Date()
@@ -20,7 +20,7 @@ const timestampFormat = () => {
 
 const transports = [
   new winston.transports.Console({
-    level: logLevel,
+    //level: logLevel,
     handleExceptions: true,
     json: false,
     colorize: true,

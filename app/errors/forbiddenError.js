@@ -5,5 +5,5 @@ class ForbiddenError extends BaseError {
     super(message, 403)
   }
 }
-
+console.log("i am in app>>errors>> forbidden error");
 export default ForbiddenError

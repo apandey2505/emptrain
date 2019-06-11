@@ -2,21 +2,29 @@ import config from '../config/app'
 import * as express from './express'
 import logger from './logger'
 import '../app/workers'
+console.log("I am in server>> app");
 
-const start = () => {
-  const port = config.get('port')
+var bodyParser = require('body-parser');
 
-  const appStartMessage = () => {
-    const env = process.env.NODE_ENV
-    logger.debug(`Initializing API`)
-    logger.info(`Server Name : ${config.get('app.name')}`)
-    logger.info(`Environment  : ${env || 'development'}`)
-    logger.info(`App Port : ${port}`)
-    logger.info(`Process Id : ${process.pid}`)
-  }
+// var db = require('../configure/database')
 
-  const app = express.init()
-  app.listen(port, appStartMessage)
-}
+// db.authenticate()
+//   .then(()=>console.log('database connected.....................'))
+//   .catch(err=> console.log("error : " + err))
 
-export default start
+
+
+const app = express.init()
+
+// listening on server
+var server = app.listen(3000,function() { 
+console.log("server is************************************************ running");
+  });
+
+
+
+//body parsing
+app.use(bodyParser.json());
+app.use(bodyParser.text());
+
+app.use('/', require('../routes/index'))

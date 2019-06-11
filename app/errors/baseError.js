@@ -5,5 +5,5 @@ class BaseError extends Error {
     this.message = message
   }
 }
-
+console.log("i am in app>>errors>> base error");
 export default BaseError

@@ -3,7 +3,9 @@ import config from '../../config/app'
 import bcrypt from 'bcrypt'
 import Log from '../../server/logger'
 import { BasicStrategy } from 'passport-http'
-
+//
+console.log(" I am in app >>authstrage >>passport");
+//
 const registerInternalAuthStrategy = () => {
   passport.use('internal', new BasicStrategy(
     async function (username, password, done) {

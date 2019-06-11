@@ -1,6 +1,8 @@
 let config = require('../config/app')
 let twilio = require('twilio')
 
+console.log("i am in server>>service_start_no");
+
 let client = twilio(config.get('twilio.accountSid'), config.get('twilio.authToken'))
 let serviceName = config.get('app.name')
 

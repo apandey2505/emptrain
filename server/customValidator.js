@@ -2,6 +2,7 @@ import validate from 'validate.js'
 import config from '../config/app'
 import crypto from 'crypto'
 
+console.log("I am in server>> customvalidation");
 var validators = {}
 
 validators.verifyRSASignature = (value, options, key, attributes) => {
@@ -14,15 +15,15 @@ validators.verifyRSASignature = (value, options, key, attributes) => {
   }
 }
 
-if (!/Core Service|Patientory File Server/.test(config.get('app.name'))) {
-  const getWeb3Instance = require('../lib/web3').default
-  const web3 = getWeb3Instance('hospital')
-  validators.isAddress = (value, options, key, attributes) => {
-    if (!web3.isAddress(value)) {
-      return 'Invalid Address'
-    }
-  }
-}
+// if (!/Core Service|Patientory File Server/.test(config.get('app.name'))) {
+//   const getWeb3Instance = require('../lib/web3').default
+//   const web3 = getWeb3Instance('hospital')
+//   validators.isAddress = (value, options, key, attributes) => {
+//     if (!web3.isAddress(value)) {
+//       return 'Invalid Address'
+//     }
+//   }
+// }
 
 Object.assign(validate.validators, validators)
 

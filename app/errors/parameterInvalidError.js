@@ -5,5 +5,6 @@ class ParameterInvalidError extends BaseError {
     super(message, 404)
   }
 }
+console.log("i am in app>>errors>> paramter");
 
 export default ParameterInvalidError

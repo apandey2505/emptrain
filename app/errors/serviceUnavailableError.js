@@ -6,4 +6,6 @@ class ServiceUnavailableError extends BaseError {
   }
 }
 
+console.log("i am in app>>errors>> service unavailble");
+
 export default ServiceUnavailableError

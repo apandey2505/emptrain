@@ -3,6 +3,9 @@
 /**
  * Module dependencies.
  */
+
+
+console.log("i am in BIN >>DEV");
 require('babel-register')
 require('babel-polyfill')
 require('../main')

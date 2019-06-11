@@ -10,8 +10,9 @@
     "async": "^2.5.0",
     "bcrypt": "^2.0.1",
     "bluebird": "^3.5.1",
+    "body-parser": "^1.19.0",
     "compression": "^1.7.1",
-    "convict": "^4.0.1",
+    "convict": "^4.4.1",
     "diskusage": "^0.2.4",
     "express": "^4.16.2",
     "express-list-routes": "^0.1.4",
@@ -23,7 +24,12 @@
     "passport": "^0.4.0",
     "passport-http": "^0.3.0",
     "passport-http-bearer": "^1.0.1",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.2",
     "request": "^2.83.0",
+    "sequelize": "^5.8.7",
+    "sequelize-cli": "^5.4.0",
+    "sqlite3": "^4.0.8",
     "stream-to-buffer": "^0.1.0",
     "validate.js": "^0.12.0",
     "winston": "^2.4.0"
@@ -38,5 +44,14 @@
     "babel-register": "^6.26.0",
     "nodemon": "^1.12.1",
     "standard": "^10.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayardi/node-express-boilerplate.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ayardi/node-express-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ayardi/node-express-boilerplate#readme"
 }

@@ -1,0 +1,27 @@
+{
+    "development": {
+      "username": "user_1",
+      "password": "123",
+      "database": "Training",
+      "host": "127.0.0.1",
+      "port": "5432",	
+      "dialect": "postgres"
+    },
+    "test": {
+      "username": "user_1",
+      "password": "pass123",
+      "database": "mydb_test",
+      "host": "127.0.0.1",
+      "port": "5432",	
+      "dialect": "postgres"
+    },
+    "production": {
+      "username": "user_1",
+      "password": "pass123",
+      "database": "mydb_prod",
+      "host": "127.0.0.1",
+      "port": "5432",	
+      "dialect": "postgres"
+    }
+  }
+  

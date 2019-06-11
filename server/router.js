@@ -1,6 +1,7 @@
 import Route from 'express/lib/router/route'
 import methods from 'methods'
 import express from 'express'
+console.log("i am in server>>router");
 
 // To detect async functions
 const AsyncFunction = (async () => { }).constructor
