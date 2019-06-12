@@ -1,7 +1,8 @@
 import ServiceBase from '../base'
 const empmodel = require('../../../models').employee_info
+import employeegetid from '../../services/employee/employeeGetId'
 
-console.log("i am in service>>Employee>> employee delete");
+
 
 const constraints = {
   variable: {
@@ -16,16 +17,22 @@ export default class Info extends ServiceBase {
     return constraints
   }
 
-  async run(xx) {
+  async run() {
     try {
 
-      empmodel.destroy({
-          where: {
-            id: xx
+
+      empmodel.update({
+            emp_name: this._args.emp_name,
+            emp_emailid: this._args.emp_emailid
+          }, {
+            where: {
+              id: this._args.id
+            }
           }
-        })
-        .then(() => console.log('employee data -- deleted'));
-      return "employee deleted from db"
+
+        )
+        .then(() => console.log('employee data -- updated'));
+      return this.args
 
     } catch (error) {
 

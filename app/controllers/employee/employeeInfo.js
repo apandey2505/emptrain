@@ -10,32 +10,35 @@ console.log("controller>> empinfo")
 //   res.send(object);
 
 //   console.log("----------*****************************---------------");
-  
+
 // });
 
 // module.exports = router;
 
 import Responder from '../../../server/expressResponder'
-import SampleService from '../../services/employee/employeeInfo'
+import employeeinfoService from '../../services/employee/employeeInfo'
+
 
 export default class employee {
 
   static async Info(req, res) {
     const variable = req.body
     //console.log(variable,"ghghghghghghgh")
-    const sampleServiceResult = await SampleService.execute(variable)
+    const employeeinfoResult = await employeeinfoService.execute(variable)
+
     console.log(" app >>controler>> employee>")
-    if (sampleServiceResult.successful) {
-      console.log(sampleServiceResult, '0000000000000000000000000000000');
-      let result =  sampleServiceResult._result;
+
+    if (employeeinfoResult.successful) {
+      console.log(employeeinfoResult, '0000000000000000000000000000000');
+      let result = employeeinfoResult._result;
+      console.log("=====")
       console.log(result, "99999999999")
-      Responder.success(res, { result })
-      //res.send("this is your employeeInfo" + sampleServiceResult );
+      Responder.success(res, {
+        result
+      })
+      //res.send("this is your employeeInfo" + employeeinfoResult );
     } else {
-      Responder.operationFailed(res, sampleServiceResult.error)
+      Responder.operationFailed(res, employeeinfoResult.error)
     }
   }
 }
-
-
-

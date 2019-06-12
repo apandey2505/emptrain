@@ -18,7 +18,7 @@ export default class Info extends ServiceBase {
 
   async run() {
     try {
-      console.log("@@@****************@@@@@@")
+      console.log("@@@@ ------------insert")
       console.log(this.args.emp_name)
       empmodel.create({
           emp_name: this._args.emp_name,
